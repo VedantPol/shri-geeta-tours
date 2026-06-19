@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   useMotionValue,
@@ -68,6 +68,15 @@ function FloatCard({ card, mx, my }) {
 export default function Hero() {
   const reduce = useReducedMotion();
   const [canParallax, setCanParallax] = useState(false);
+  const videoRef = useRef(null);
+
+  // Honour reduced-motion: pause the background video and show the poster frame.
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (reduce) v.pause();
+    else v.play().catch(() => {});
+  }, [reduce]);
 
   const mvx = useMotionValue(0);
   const mvy = useMotionValue(0);
@@ -95,16 +104,21 @@ export default function Hero() {
       onPointerMove={onMove}
       className="relative flex min-h-[90svh] items-center overflow-hidden pt-28 pb-14 sm:pb-16"
     >
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=75"
-          alt="Turquoise ocean and white sand beach seen from above"
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
+      {/* Background: looping aerial travel video with an instant poster frame. */}
+      <div className="absolute inset-0 -z-10 bg-ink">
+        <video
+          ref={videoRef}
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/video/hero-poster.jpg"
+          aria-hidden="true"
+        >
+          <source src="/video/hero-720.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink/75" />
       </div>
 
