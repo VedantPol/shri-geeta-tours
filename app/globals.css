@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --shell-x: clamp(1.25rem, 5vw, 4rem);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-sand-50 text-ink font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-amber-brand/20 text-ink;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /* Respect users who prefer less motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .shell {
+    width: 100%;
+    max-width: theme("maxWidth.shell");
+    margin-inline: auto;
+    padding-inline: var(--shell-x);
+  }
+
+  .kicker {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-kicker text-amber-deep;
+  }
+
+  .kicker::before {
+    content: "";
+    @apply h-px w-8 bg-amber-brand/60;
+  }
+
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-brand focus-visible:ring-offset-2 focus-visible:ring-offset-sand-50;
+  }
+
+  .btn-primary {
+    @apply bg-ink text-sand-50 hover:bg-amber-brand;
+  }
+
+  .btn-light {
+    @apply bg-sand-50 text-ink hover:bg-white;
+  }
+
+  .btn-ghost {
+    @apply border border-ink/15 bg-transparent text-ink hover:border-ink/40 hover:bg-ink/5;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .eyebrow {
+    @apply kicker mb-4;
+  }
+}
+
+/* Hide scrollbar on horizontal sliders while keeping scroll. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
