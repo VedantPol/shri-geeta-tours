@@ -15,22 +15,24 @@ export default function WhyUs() {
           </Reveal>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4">
           {whyUs.map((item, i) => (
-            <Reveal key={item.title} delay={i * 0.08}>
-              <article className="group h-full overflow-hidden rounded-3xl bg-sand-50 ring-1 ring-ink/5 transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(22,17,13,0.1)]">
-                <div className="relative h-44 overflow-hidden">
+            <Reveal key={item.title} delay={i * 0.07}>
+              <article className="group h-full overflow-hidden rounded-2xl bg-sand-50 ring-1 ring-ink/5 transition-shadow duration-300 hover:shadow-[0_20px_50px_rgba(22,17,13,0.1)] sm:rounded-3xl">
+                <div className="relative h-28 overflow-hidden sm:h-44">
                   <Image
                     src={item.image}
                     alt={item.alt}
                     fill
                     className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 25vw"
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.copy}</p>
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-base font-semibold text-ink sm:text-lg">{item.title}</h3>
+                  <p className="mt-1.5 text-[0.8rem] leading-relaxed text-ink-muted sm:mt-2 sm:text-sm">
+                    {item.copy}
+                  </p>
                 </div>
               </article>
             </Reveal>

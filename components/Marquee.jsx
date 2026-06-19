@@ -4,10 +4,10 @@ export default function Marquee() {
   // Duplicate the list so the -50% translate loops seamlessly.
   const items = [...marqueeItems, ...marqueeItems];
   return (
-    <div className="border-y border-ink/10 bg-ink py-5 text-sand-50">
-      <div className="flex w-max animate-marquee gap-10 whitespace-nowrap will-change-transform">
+    <div className="overflow-hidden border-y border-ink/10 bg-ink py-4 text-sand-50 sm:py-5">
+      <div className="flex w-max animate-marquee gap-8 whitespace-nowrap will-change-transform motion-reduce:animate-none sm:gap-10">
         {items.map((item, i) => (
-          <span key={i} className="flex items-center gap-10 font-display text-xl italic sm:text-2xl">
+          <span key={i} className="flex items-center gap-8 font-display text-lg italic sm:gap-10 sm:text-2xl">
             {item}
             <span className="text-amber-soft" aria-hidden="true">
               ✦

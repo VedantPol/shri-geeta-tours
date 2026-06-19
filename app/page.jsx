@@ -5,12 +5,9 @@ import About from "@/components/About";
 import Experiences from "@/components/Experiences";
 import Destinations from "@/components/Destinations";
 import Packages from "@/components/Packages";
-import Story from "@/components/Story";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
-import Blogs from "@/components/Blogs";
 import Faq from "@/components/Faq";
-import Gallery from "@/components/Gallery";
 import CtaBanner from "@/components/CtaBanner";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -47,12 +44,9 @@ export default function Home() {
         <Experiences />
         <Destinations />
         <Packages />
-        <Story />
         <WhyUs />
         <Testimonials />
-        <Blogs />
         <Faq />
-        <Gallery />
         <CtaBanner />
       </main>
       <Footer />
