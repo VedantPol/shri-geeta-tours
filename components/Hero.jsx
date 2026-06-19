@@ -32,6 +32,7 @@ export default function Hero() {
           playsInline
           preload="auto"
           poster="/video/hero-poster.jpg"
+          disablePictureInPicture
           aria-hidden="true"
         >
           <source src="/video/hero-720.mp4" type="video/mp4" />
