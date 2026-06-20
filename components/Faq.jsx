@@ -34,7 +34,7 @@ export default function Faq() {
                   <span className="text-lg font-medium text-ink">{item.q}</span>
                   <span
                     className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-ink/15 transition-transform duration-300 ${
-                      isOpen ? "rotate-45 bg-amber-brand text-sand-50" : "text-ink"
+                      isOpen ? "rotate-45 bg-green-brand text-sand-50" : "text-ink"
                     }`}
                   >
                     <Plus size={16} />

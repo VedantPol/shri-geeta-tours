@@ -9,7 +9,7 @@ export default function Marquee() {
         {items.map((item, i) => (
           <span key={i} className="flex items-center gap-8 font-display text-lg italic sm:gap-10 sm:text-2xl">
             {item}
-            <span className="text-amber-soft" aria-hidden="true">
+            <span className="text-green-soft" aria-hidden="true">
               ✦
             </span>
           </span>

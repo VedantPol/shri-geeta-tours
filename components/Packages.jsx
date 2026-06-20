@@ -10,7 +10,7 @@ export default function Packages() {
       <div className="shell">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
-            <Reveal as="p" className="kicker !text-amber-soft">
+            <Reveal as="p" className="kicker !text-green-soft">
               Handpicked packages
             </Reveal>
             <Reveal as="h2" delay={0.05} className="mt-4 text-[clamp(1.7rem,4vw,2.8rem)] font-semibold leading-tight">
@@ -27,7 +27,7 @@ export default function Packages() {
         <div className="grid gap-6 md:grid-cols-3">
           {packages.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
-              <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-sand-50/[0.04] ring-1 ring-sand-50/10 transition-colors duration-300 hover:ring-amber-soft/50">
+              <article className="group flex h-full flex-col overflow-hidden rounded-3xl bg-sand-50/[0.04] ring-1 ring-sand-50/10 transition-colors duration-300 hover:ring-green-soft/60">
                 <div className="relative h-56 overflow-hidden">
                   <Image
                     src={p.image}
@@ -49,7 +49,7 @@ export default function Packages() {
                       href={wa(`Please send details for the ${p.title} package.`)}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1 text-sm font-medium text-sand-50 transition-colors hover:text-amber-soft"
+                      className="inline-flex items-center gap-1 text-sm font-medium text-sand-50 transition-colors hover:text-green-soft"
                     >
                       Ask on WhatsApp <ArrowUpRight size={15} />
                     </a>

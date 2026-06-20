@@ -37,7 +37,7 @@ export default function Destinations() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-6 text-sand-50">
                 <span className="font-display text-2xl font-semibold">{d.name}</span>
-                <span className="grid h-10 w-10 place-items-center rounded-full border border-sand-50/40 transition-all duration-300 group-hover:bg-amber-brand group-hover:border-amber-brand">
+                <span className="grid h-10 w-10 place-items-center rounded-full border border-sand-50/40 transition-all duration-300 group-hover:border-green-brand group-hover:bg-green-brand">
                   →
                 </span>
               </div>

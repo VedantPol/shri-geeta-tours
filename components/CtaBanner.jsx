@@ -17,7 +17,7 @@ export default function CtaBanner() {
             />
             <div className="absolute inset-0 bg-ink/60" />
             <div className="relative z-10 mx-auto max-w-2xl">
-              <p className="kicker justify-center !text-amber-soft">Ready when you are</p>
+              <p className="kicker justify-center !text-green-soft">Ready when you are</p>
               <h2 className="mt-4 text-[clamp(1.9rem,5vw,3.4rem)] font-semibold leading-tight">
                 Tell us the destination. We&apos;ll shape the journey.
               </h2>

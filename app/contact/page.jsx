@@ -84,7 +84,7 @@ export default function ContactPage() {
                   className="flex items-center justify-between rounded-2xl bg-sand-50/[0.06] px-5 py-4 transition-colors hover:bg-sand-50/10"
                 >
                   <span className="text-sm text-sand-100/70">WhatsApp</span>
-                  <strong className="text-amber-soft">Chat now</strong>
+                  <strong className="text-green-soft">Chat now</strong>
                 </a>
                 <div className="mt-auto rounded-2xl border border-sand-50/10 p-5">
                   <h3 className="font-display text-lg text-sand-50">For faster quotes</h3>
@@ -103,7 +103,7 @@ export default function ContactPage() {
             {steps.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.08}>
                 <article className="rounded-3xl bg-sand-50 p-7 ring-1 ring-ink/5">
-                  <span className="font-display text-3xl text-amber-brand">{s.n}</span>
+                  <span className="font-display text-3xl text-green-brand">{s.n}</span>
                   <h3 className="mt-3 text-xl font-semibold text-ink">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink-muted">{s.copy}</p>
                 </article>

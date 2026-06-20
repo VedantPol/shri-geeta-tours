@@ -19,7 +19,7 @@ export default function Footer() {
               {site.description}
             </p>
             <p className="mt-5 flex items-center gap-2 text-sm text-sand-100/70">
-              <MapPin size={16} className="text-amber-soft" /> {site.city}
+              <MapPin size={16} className="text-green-soft" /> {site.city}
             </p>
           </div>
 
@@ -28,7 +28,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-3 text-sm">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="text-sand-100/70 transition-colors hover:text-amber-soft">
+                  <Link href={item.href} className="text-sand-100/70 transition-colors hover:text-green-soft">
                     {item.label}
                   </Link>
                 </li>
@@ -40,12 +40,12 @@ export default function Footer() {
             <h3 className="font-display text-lg text-sand-50">Contact</h3>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href={`tel:${site.phoneRaw}`} className="flex items-center gap-2 text-sand-100/70 transition-colors hover:text-amber-soft">
+                <a href={`tel:${site.phoneRaw}`} className="flex items-center gap-2 text-sand-100/70 transition-colors hover:text-green-soft">
                   <Phone size={16} /> {site.phone}
                 </a>
               </li>
               <li>
-                <a href={wa()} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sand-100/70 transition-colors hover:text-amber-soft">
+                <a href={wa()} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sand-100/70 transition-colors hover:text-green-soft">
                   <MessageCircle size={16} /> WhatsApp chat
                 </a>
               </li>

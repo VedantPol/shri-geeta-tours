@@ -26,7 +26,7 @@ export default function ContactForm() {
   };
 
   const field =
-    "mt-1.5 w-full rounded-xl border border-ink/15 bg-sand-50 px-4 py-3 text-base text-ink outline-none transition-colors placeholder:text-ink-muted/60 focus:border-amber-brand focus:ring-2 focus:ring-amber-brand/20";
+    "mt-1.5 w-full rounded-xl border border-ink/15 bg-sand-50 px-4 py-3 text-base text-ink outline-none transition-colors placeholder:text-ink-muted/60 focus:border-green-brand focus:ring-2 focus:ring-green-brand/20";
 
   return (
     <form onSubmit={onSubmit} className="rounded-3xl bg-sand-100 p-6 ring-1 ring-ink/5 sm:p-8">

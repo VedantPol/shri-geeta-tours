@@ -73,7 +73,7 @@ export default function Testimonials() {
                 onClick={() => setI(d)}
                 aria-label={`Show testimonial ${d + 1}`}
                 className={`h-2 cursor-pointer rounded-full transition-all duration-300 ${
-                  d === i ? "w-8 bg-amber-brand" : "w-2 bg-ink/20 hover:bg-ink/40"
+                  d === i ? "w-8 bg-green-brand" : "w-2 bg-ink/20 hover:bg-ink/40"
                 }`}
               />
             ))}

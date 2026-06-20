@@ -32,7 +32,7 @@ export default function Experiences() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6 text-sand-50">
-                  <span className="font-display text-sm text-amber-soft">{exp.n}</span>
+                  <span className="font-display text-sm text-green-soft">{exp.n}</span>
                   <h3 className="mt-1 text-xl font-semibold sm:text-2xl">{exp.title}</h3>
                   {/* Always visible on mobile; reveal on hover from md up. */}
                   <p className="mt-2 max-w-sm text-sm leading-relaxed text-sand-100/85 transition-all duration-500 md:translate-y-2 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">

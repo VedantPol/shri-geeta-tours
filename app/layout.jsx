@@ -1,6 +1,7 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { site } from "@/lib/site";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,7 +51,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: "#16110D",
+  themeColor: "#16314F",
   width: "device-width",
   initialScale: 1,
 };
@@ -58,7 +59,10 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ScrollProgress />
+        {children}
+      </body>
     </html>
   );
 }

@@ -40,10 +40,12 @@ export default function Navbar() {
       >
         <Link
           href="/"
-          className="group flex items-center gap-2.5 font-display text-lg font-semibold text-ink"
+          className={`group flex items-center gap-2.5 font-display text-lg font-semibold transition-colors duration-300 ${
+            scrolled ? "text-ink" : "text-sand-50"
+          }`}
           aria-label={`${site.legalName} home`}
         >
-          <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-ink/10 shadow-sm transition-transform duration-300 group-hover:scale-105">
+          <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-white/20 shadow-sm transition-transform duration-300 group-hover:scale-105">
             <Image src="/logo-mark.png" alt={`${site.legalName} logo`} fill className="object-cover" sizes="40px" priority />
           </span>
           <span>{site.shortName}</span>
@@ -54,7 +56,11 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="relative text-sm font-medium text-ink/75 transition-colors hover:text-ink after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-amber-brand after:transition-all after:duration-300 hover:after:w-full"
+              className={`relative text-sm font-medium transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-0 after:bg-green-brand after:transition-all after:duration-300 hover:after:w-full ${
+                scrolled
+                  ? "text-ink/75 hover:text-ink"
+                  : "text-sand-50/85 hover:text-sand-50"
+              }`}
             >
               {item.label}
             </Link>
@@ -75,7 +81,11 @@ export default function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close navigation" : "Open navigation"}
             aria-expanded={open}
-            className="grid h-10 w-10 cursor-pointer place-items-center rounded-full border border-ink/10 text-ink transition-colors hover:bg-ink/5 md:hidden"
+            className={`grid h-10 w-10 cursor-pointer place-items-center rounded-full border transition-colors md:hidden ${
+              scrolled
+                ? "border-ink/10 text-ink hover:bg-ink/5"
+                : "border-sand-50/30 text-sand-50 hover:bg-sand-50/10"
+            }`}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>

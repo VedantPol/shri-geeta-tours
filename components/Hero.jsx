@@ -25,7 +25,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-ink">
         <video
           ref={videoRef}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover motion-safe:animate-heroZoom"
           autoPlay
           muted
           loop
@@ -37,8 +37,9 @@ export default function Hero() {
         >
           <source src="/video/hero-720.mp4" type="video/mp4" />
         </video>
-        {/* Slightly stronger gradient now that the floating cards are gone. */}
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/40 to-ink/80" />
+        {/* Navy base gradient for legibility + a subtle green/teal brand wash. */}
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/45 to-ink/85" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-ink/30 via-transparent to-green-deep/20 mix-blend-multiply" />
       </div>
 
       <div className="shell relative z-20 text-sand-50">
@@ -46,7 +47,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease }}
-          className="kicker !text-amber-soft"
+          className="kicker !text-green-soft"
         >
           Mumbai based travel desk
         </motion.p>
