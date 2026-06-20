@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, Plane } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { nav, site, wa } from "@/lib/site";
 
@@ -42,8 +43,8 @@ export default function Navbar() {
           className="group flex items-center gap-2.5 font-display text-lg font-semibold text-ink"
           aria-label={`${site.legalName} home`}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-amber-brand text-sand-50 transition-transform duration-300 group-hover:-rotate-12">
-            <Plane className="h-4.5 w-4.5" strokeWidth={2} size={18} />
+          <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-ink/10 shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <Image src="/logo-mark.png" alt={`${site.legalName} logo`} fill className="object-cover" sizes="40px" priority />
           </span>
           <span>{site.shortName}</span>
         </Link>

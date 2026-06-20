@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Plane, Phone, MessageCircle, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { site, nav, wa } from "@/lib/site";
 
 export default function Footer() {
@@ -9,8 +10,8 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5 font-display text-xl font-semibold text-sand-50">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-amber-brand text-sand-50">
-                <Plane size={18} strokeWidth={2} />
+              <span className="relative h-11 w-11 overflow-hidden rounded-xl ring-1 ring-sand-50/15">
+                <Image src="/logo-mark.png" alt={`${site.legalName} logo`} fill className="object-cover" sizes="44px" />
               </span>
               {site.shortName}
             </Link>
